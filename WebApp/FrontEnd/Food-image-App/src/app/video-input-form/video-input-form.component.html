@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="formclass">
+    <h2 class="title">See Food Project</h2>
+    <form [formGroup]="videoFileForm" (ngSubmit)="onSubmit()">
+
+       <div class="form-group">
+        <label for="name">Recipe image</label>
+        <input type="file" class="form-control" id="frontal"  formControlName="frontal_image" (change)="onSelectFile($event)" />
+
+      </div>
+
+
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+    <br/>
+    </div>
+<div class="overlay" [hidden]="!loading">
+<div class="center" >
+
+<!--    <mat-progress-spinner [mode]="'indeterminate'" class="loadingIcon">-->
+
+<!--    </mat-progress-spinner>-->
+  <mat-progress-bar [mode]="'determinate'" [value]="determinateValue" class="loadingIcon"></mat-progress-bar>
+
+<div style="position:fixed;color:white; width:100%;top: 95%; left: 70%;z-index:99999" id="statusLabel">
+  <h4> Processing ..  </h4>
+</div>
+</div>
+</div>
+<div id="result" style="display:none">
+<table >
+<tr>
+<td>
+  <div class="video-container">
+    <img id="image" src="{{url}}" alt="recipe image" width="400" height="600" />
+
+  </div>
+</td>
+<td>
+  <div>
+    <h4> <span style="color:green">Food classification:</span> {{classification}} </h4> <br/>
+    <h4><span style="color:green"> Recipe title:</span> {{title}} </h4>
+    <h5> <span style="color:green">Recipe Ingredients: </span>{{ingrs}} </h5>
+    <h5> <span style="color:green">Cooking Procedure:</span> </h5>
+    <ul>
+  <li *ngFor="let item of receipes; let i = index">
+    {{i+1}}. {{item}}
+  </li>
+</ul>
+<h4><span style="color:green">Calorie Estimation:</span> </h4>
+<ul>
+<li *ngFor="let item of calories; let i = index">
+ {{item}}
+</li>
+</ul>
+    </div>
+  </td>
+    </tr>
+    </table>
+    </div>
+
+  <div class="errorMessage">
+    <h3> {{error}}</h3>
+  </div>
+
+  <div class="footerBtn">
+<!--     <button type="submit" class="btn btn-primary" (click)="downloadOutput()" [disabled]="isDisabled" >Download Output video</button>-->
+<!--         <button type="submit" class="btn btn-primary" style="margin-left:10px" (click)="downloadText()" [disabled]="isDisabled">Download Text files</button>-->
+
+  </div>
+</div>
