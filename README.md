@@ -11,4 +11,7 @@ Pranav Lodha
 ## Files
 
 Presentation: [PowerPoint in pdf format](https://github.com/plodha/CMPE258_Project/blob/master/Presentation/Project%20Presentation.pdf)
+
 Video Demo: [Project Presentation + Demo](https://github.com/plodha/CMPE258_Project/blob/master/demo-video/Final-Video.mov)
+
+Paper: 
