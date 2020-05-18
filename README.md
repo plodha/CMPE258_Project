@@ -22,6 +22,6 @@ Paper: [Paper in pdf format](https://github.com/plodha/CMPE258_Project/blob/mast
 Model :
 https://drive.google.com/drive/folders/1i70uNeCJ6z-3akobjnUXyA0r1eeJAuKV?usp=sharing
 
-Note: the google drive link works only for SJSU
+Note: the google drive link works only for SJSU email ids
 
 We added an inference collab to represent all three modules
